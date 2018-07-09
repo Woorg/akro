@@ -1,0 +1,28 @@
+include ../icon/icon
+
+
+mixin header()
+	header.header&attributes(attributes)
+		.header__in
+			.header__top
+				a.header__logo.logo(href="#logo")
+					.logo__brand Akro
+					.logo__slogan Digital-агентство полного цикла
+
+				nav.header__nav.nav
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href="#") агентство
+						li.nav__item
+							a.nav__link(href="#") услуги
+						li.nav__item
+							a.nav__link(href="#") портфолио
+						li.nav__item
+							a.nav__link(href="#") блог
+						li.nav__item
+							a.nav__link(href="#") контакты
+			.header__bottom
+				a.header__phone.phone(href="tel:74952202125")
+					+icon('phone', true).phone__icon
+					| +7 (495) 220-21-25
+				a.header__button.button(href="#callback") Заказать звонок

@@ -1,0 +1,96 @@
+// General body styles
+
+.page
+	background-color #fff
+	font-display swap
+	// font-family $rR
+	font-family $rcR
+	font-size 15px
+	color #5a5a5a
+
+img
+	display block
+	max-width 100%
+	height auto
+
+// Container
+
+.in
+	margin auto
+	padding-right 15px
+	padding-left 15px
+	min-width 280px
+	max-width 1170px
+
+// Links
+
+a:link
+	text-decoration none
+
+
+// Buttons
+
+.button
+	position relative
+	border none
+	padding-top 8px
+	padding-right 22px
+	padding-bottom 10px
+	padding-left 22px
+	display inline-block
+	vertical-align top
+	background-color #fece00
+	color #000000
+	font-family $rR
+	font-size 17px
+	line-height 1
+	text-align center
+	letter-spacing tracking(75)
+	border-radius 5px
+	tr(all .3s ease)
+	&:hover
+		transform scale(.98)
+		background-color darken(#fece00, 3)
+		tr(all .3s ease)
+	&_big
+		padding-top 25px
+		padding-left 32px
+		padding-right 32px
+		padding-bottom 25px
+		// font-family $rM
+		font-family $rcR
+		font-size 48px
+		letter-spacing tracking(100)
+		+r($tL)
+			font-size 24px
+// Titles
+
+.title
+	font-size 72px
+	font-family $rcR
+	color #fff
+	text-align center
+	letter-spacing tracking(200)
+	+r($tL)
+		font-size 45px
+	+r($t)
+		font-size 28px
+	+r($m)
+		font-size 24px
+
+
+
+
+// wysiwyg editor styles
+
+.wysiwyg
+	p
+		margin-bottom 30px
+		line-height 1.428
+		color #5a5a5a
+
+	img
+		max-width 100%
+		height auto
+
+

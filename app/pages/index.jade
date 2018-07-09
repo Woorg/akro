@@ -1,0 +1,28 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+
+include /blocks/hero/hero
+include /blocks/about/about
+include /blocks/works/works
+include /blocks/services/services
+include /blocks/testimonials/testimonials
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Akro - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+hero()
+	+about()
+	+works()
+	+services()
+	+testimonials()
+	+cta()
+	+footer()
+
+

@@ -1,0 +1,29 @@
+include ../icon/icon
+
+
+mixin services()
+	section.services&attributes(attributes)
+		.services__in
+			h2.services__title Наши услуги
+			ul.services__list
+				li.services__item
+					a.services__link(href="#")
+						.services__top
+							.services__num 1
+						.services__item-title Разработка сайтов
+						.services__button
+							+icon('right-arrow', true).services__button-icon
+				li.services__item
+					a.services__link(href="#")
+						.services__top
+							.services__num 2
+						.services__item-title Брендинг
+						.services__button
+							+icon('right-arrow', true).services__button-icon
+				li.services__item
+					a.services__link(href="#")
+						.services__top
+							.services__num 3
+						.services__item-title Продвижение сайтов
+						.services__button
+							+icon('right-arrow', true).services__button-icon
