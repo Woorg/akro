@@ -1,2 +1,67 @@
 .testimonials
 	display block
+	&__in
+		position relative
+		@extends .in
+		padding-top 100px
+		padding-bottom 100px
+	&__title
+		@extends .title
+		margin-bottom 63px
+	&__slider
+		max-width 754px
+	&__item
+		padding-left 50px
+		padding-right 50px
+		color #fff
+
+	&__name
+		margin-bottom 25px
+		font-family $aB
+		font-size 24px
+	&__text
+		position relative
+		&:after,
+		&:before
+			position absolute
+			content ''
+			width 30px
+			height 27px
+			background url('../images/general/quote-left.svg') 0 0 / cover no-repeat
+		&:before
+			top 0
+			left -50px
+		&:after
+			bottom 0
+			right -50px
+			transform rotate(-180deg)
+
+
+	&__nav
+		position absolute
+		right 0
+		bottom 170px
+		width 142px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+
+	.slick-arrow
+		position static
+		top 0
+		width 46px
+		height 46px
+		background url('../images/general/slider-arrow-left.svg') 0 0 / cover no-repeat
+		transform none
+		opacity 1
+		&:before
+			display none
+		&:hover
+			opacity 0.8
+	.slick-prev
+		left 0
+		transform rotate(0deg)
+	.slick-next
+		right 0
+		transform rotate(-180deg)

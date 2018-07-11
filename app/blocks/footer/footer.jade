@@ -1,2 +1,32 @@
+include ../icon/icon
+
 mixin footer()
 	footer.footer&attributes(attributes)
+		.footer__in
+			.footer__top
+				a.footer__logo.logo(href="#logo")
+					img(src="assets/images/general/logo.svg", alt="akro").logo__brand
+					.logo__slogan Digital-агентство полного цикла
+				nav.footer__nav.nav.nav_sec
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href="#") агентство
+						li.nav__item
+							a.nav__link(href="#") услуги
+						li.nav__item
+							a.nav__link(href="#") портфолио
+						li.nav__item
+							a.nav__link(href="#") блог
+						li.nav__item
+							a.nav__link(href="#") контакты
+			.footer__bottom
+				.footer__copyright © 2018 AKRO agency |
+					a.footer__copyright-link(href="#") Карта сайта
+				.footer__contacts
+					a.footer__phone.phone(href="tel:74952202125")
+						+icon('phone', true).phone__icon
+						| +7 (495) 220-21-25
+
+					a.footer__email.email(href="mailto:info@akro.agency")
+						+icon('email', true).email__icon
+						| info@akro.agency

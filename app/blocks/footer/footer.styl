@@ -1,2 +1,58 @@
 .footer
 	display block
+	background #333
+	&__in
+		@extends .in
+	&__top
+		padding-top 46px
+		padding-bottom 56px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	// &__logo
+	// 	max-width 356px
+	&__nav
+		max-width 598px
+	&__bottom
+		border-top 1px solid #535454
+		padding-top 40px
+		padding-bottom 50px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	&__phone
+		margin-right 30px
+
+	&__copyright
+		color #8B8B8B
+		font-size 14px
+
+	&__copyright-link
+		color #8B8B8B
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+	// &__contacts
+
+	&__phone
+		margin-right 60px
+
+	// &__email
+
+
+.email
+	font-family $mR
+	font-size 24px
+	color #FFF
+	line-height 1
+	text-decoration none
+	&__icon
+		position relative
+		top 3px
+		margin-right 10px
+		width 24px
+		height 20px
+		fill #fff

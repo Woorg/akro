@@ -1,12 +1,16 @@
 // General body styles
 
 .page
-	background-color #fff
+	background-color #000000
 	font-display swap
-	// font-family $rR
-	font-family $rcR
-	font-size 15px
+	font-family $mR
+	font-weight normal
+	font-size 16px
+	line-height 1.625
 	color #5a5a5a
+	&_inner
+		.header
+			position static
 
 img
 	display block
@@ -24,62 +28,51 @@ img
 
 // Links
 
-a:link
-	text-decoration none
-
+// a:link
+// 	text-decoration none
 
 // Buttons
 
 .button
-	position relative
 	border none
-	padding-top 8px
-	padding-right 22px
-	padding-bottom 10px
-	padding-left 22px
+	padding-top 15px
+	padding-right 30px
+	padding-bottom 15px
+	padding-left 30px
 	display inline-block
 	vertical-align top
-	background-color #fece00
-	color #000000
-	font-family $rR
-	font-size 17px
+	background-color #00c6d7
+	color #ffffff
+	font-weight normal
+	font-family $mB
+	font-size 16px
 	line-height 1
 	text-align center
-	letter-spacing tracking(75)
-	border-radius 5px
+	text-decoration none
 	tr(all .3s ease)
 	&:hover
-		transform scale(.98)
-		background-color darken(#fece00, 3)
+		background-color darken(#00c6d7, 10)
 		tr(all .3s ease)
-	&_big
-		padding-top 25px
-		padding-left 32px
-		padding-right 32px
-		padding-bottom 25px
-		// font-family $rM
-		font-family $rcR
-		font-size 48px
-		letter-spacing tracking(100)
-		+r($tL)
-			font-size 24px
+	&_sec
+		border 2px solid #00c6d7
+		background transparent
+		&:hover
+			background-color #00c6d7
+
 // Titles
 
 .title
-	font-size 72px
-	font-family $rcR
+	font-size 54px
+	font-family $mR
 	color #fff
-	text-align center
-	letter-spacing tracking(200)
+	text-transform uppercase
+	letter-spacing 3px
 	+r($tL)
 		font-size 45px
 	+r($t)
 		font-size 28px
 	+r($m)
 		font-size 24px
-
-
-
 
 // wysiwyg editor styles
 
@@ -94,3 +87,7 @@ a:link
 		height auto
 
 
+.resp-image
+	img
+		max-width 100%
+		height auto

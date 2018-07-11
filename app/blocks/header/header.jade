@@ -1,12 +1,11 @@
 include ../icon/icon
 
-
 mixin header()
 	header.header&attributes(attributes)
 		.header__in
 			.header__top
 				a.header__logo.logo(href="#logo")
-					.logo__brand Akro
+					img(src="assets/images/general/logo.svg", alt="akro").logo__brand
 					.logo__slogan Digital-агентство полного цикла
 
 				nav.header__nav.nav
@@ -19,8 +18,9 @@ mixin header()
 							a.nav__link(href="#") портфолио
 						li.nav__item
 							a.nav__link(href="#") блог
-						li.nav__item
+						li.nav__item.current-item
 							a.nav__link(href="#") контакты
+
 			.header__bottom
 				a.header__phone.phone(href="tel:74952202125")
 					+icon('phone', true).phone__icon

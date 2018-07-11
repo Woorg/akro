@@ -1,0 +1,49 @@
+.p-services
+	margin-top 37px
+	display block
+	color #fff
+	&__text
+		margin-bottom 50px
+		max-width 600px
+		font-size 18px
+		line-height 1.555
+	&__service
+		padding-top 50px
+		padding-bottom 50px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-self flex-start
+	&__service_odd
+		.p-services__service-content
+			order -1
+		.p-services__service-img
+			text-align right
+	&__service_even
+		.p-services__service-content
+			order 1
+		.p-services__service-img
+			text-align left
+	// &__service-w
+	&__service-title
+		margin-bottom 10px
+		font-size 36px
+
+	// &__service-content
+	// 	margin-right 30px
+	&__service-text
+		margin-bottom 30px
+		font-size 18px
+		line-height 1.555
+	&__service-content,
+	&__service-img
+		flex 1 1 48%
+	&__service-img
+		padding-top 22px
+		text-align center
+		img
+			display inline-block
+			vertical-align top
+			respimg()
+
+	// &__service-button

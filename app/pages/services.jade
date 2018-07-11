@@ -1,0 +1,26 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+
+include /blocks/main/main
+include /blocks/p-services/p-services
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Контакты - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+main()
+		.main__in
+			h1.main__title Услуги
+			+p-services()
+
+	+cta()
+	+footer()
+
+

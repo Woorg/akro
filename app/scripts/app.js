@@ -1,10 +1,10 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
+// import 'masonry-layout';
 // import 'magnific-popup';
 // import mask from "jquery-mask-plugin";
 // import 'jquery-validation';
-
 
 (function ($) {
 
@@ -25,143 +25,162 @@ import $ from 'jquery';
 
 	console.log('%c developed by igor gorlov https://webjeb.ru', styles);
 
+
 	$(function() {
 
+		const $heroSlider = $('.hero__slider');
 
-		// const $testimonialsSlider = $('.testimonials__slider');
+		if ($heroSlider.length) {
+			$heroSlider.slick({
+				slidesToShow: 1,
+				dots: true,
+				arrows: false,
+				// speed: 900,
+				fade: true,
+				infinite: true,
+				// waitForAnimate: true,
+				adaptiveHeight: false,
+				customPaging: function(slider, i) {
+					var thumb = $(slider.$slides[i]).data();
+					return '<a>0' + (i + 1) + '</a>';
+				}
+			});
+		}
 
-		// if ($testimonialsSlider.length) {
-		// 	$testimonialsSlider.slick({
-		// 		slidesToShow: 1,
-		// 		dots: false,
-		// 		arrows: true,
-		// 		speed: 900,
-		// 		fade: true,
-		// 		infinite: true,
-		// 		waitForAnimate: true,
-		// 		adaptiveHeight: false
+		const $reviewsSlider = $('.testimonials__slider');
 
-		// 	});
-		// }
+		if ($reviewsSlider.length) {
+			$reviewsSlider.slick({
+				slidesToShow: 1,
+				dots: false,
+				arrows: true,
+				// speed: 900,
+				fade: true,
+				infinite: true,
+				// waitForAnimate: true,
+				adaptiveHeight: false,
+				appendArrows: $('.testimonials__nav')
 
-
-
-	// $('.popup-open').magnificPopup({
-	// 	type: 'inline',
-	// 	midClick: true
-	// });
-
-
-	/**
-	 * Main menu show
-	 */
-
-	// $('.nav__list a').on('click', function(e) {
-	// 	var _scroll = $(this).attr('href');
-	// 	if (_scroll != '#' && $(_scroll).length) {
-	// 		$('html, body').animate({ scrollTop: $(_scroll).offset().top - 80 }, 800);
-	// 	}
-	// });
-
-
-	// Validation
-
-	// const form = $('#wpcf7-f630-p441-o1 form');
-
-	// $.validator.setDefaults({
-	// 	errorPlacement: function (error, element) {
-	// 		element
-	// 			.prev()
-	// 			.attr("placeholder", error[0].outerText);
-	// 	}
-	// });
-
-	// form.validate({
-	// 	rules: {
-	// 		name_1 : {
-	// 			required: true
-	// 		},
-	// 		email_1: {
-	// 			required: true,
-	// 			email: true
-	// 		},
-	// 		message_1: {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	message: {
-	// 		name_1: {
-	// 			required: ''
-	// 		},
-	// 		email_1: {
-	// 			required: '',
-	// 			email: ''
-	// 		},
-	// 		message_1: {
-	// 			required: ''
-	// 		}
-	// 	}
-	// });
+			});
+		}
 
 
-	// const formSec = $('#wpcf7-f635-o1 form');
-
-	// formSec.validate({
-	// 	rules: {
-	// 		name_1 : {
-	// 			required: true
-	// 		},
-	// 		email_1: {
-	// 			required: true,
-	// 			email: true
-	// 		},
-	// 		message_1: {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	message: {
-	// 		name_1: {
-	// 			required: ''
-	// 		},
-	// 		email_1: {
-	// 			required: '',
-	// 			email: ''
-	// 		},
-	// 		message_1: {
-	// 			required: ''
-	// 		}
-	// 	}
-	// });
+		// $('.popup-open').magnificPopup({
+		// 	type: 'inline',
+		// 	midClick: true
+		// });
 
 
-	// const formThird = $('#wpcf7-f635-o2 form');
+		/**
+		 * Main menu show
+		 */
 
-	// formThird.validate({
-	// 	rules: {
-	// 		name_1 : {
-	// 			required: true
-	// 		},
-	// 		email_1: {
-	// 			required: true,
-	// 			email: true
-	// 		},
-	// 		message_1: {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	message: {
-	// 		name_1: {
-	// 			required: ''
-	// 		},
-	// 		email_1: {
-	// 			required: '',
-	// 			email: ''
-	// 		},
-	// 		message_1: {
-	// 			required: ''
-	// 		}
-	// 	}
-	// });
+		// $('.nav__list a').on('click', function(e) {
+		// 	var _scroll = $(this).attr('href');
+		// 	if (_scroll != '#' && $(_scroll).length) {
+		// 		$('html, body').animate({ scrollTop: $(_scroll).offset().top - 80 }, 800);
+		// 	}
+		// });
+
+
+		// Validation
+
+		// const form = $('#wpcf7-f630-p441-o1 form');
+
+		// $.validator.setDefaults({
+		// 	errorPlacement: function (error, element) {
+		// 		element
+		// 			.prev()
+		// 			.attr("placeholder", error[0].outerText);
+		// 	}
+		// });
+
+		// form.validate({
+		// 	rules: {
+		// 		name_1 : {
+		// 			required: true
+		// 		},
+		// 		email_1: {
+		// 			required: true,
+		// 			email: true
+		// 		},
+		// 		message_1: {
+		// 			required: true
+		// 		}
+		// 	},
+		// 	message: {
+		// 		name_1: {
+		// 			required: ''
+		// 		},
+		// 		email_1: {
+		// 			required: '',
+		// 			email: ''
+		// 		},
+		// 		message_1: {
+		// 			required: ''
+		// 		}
+		// 	}
+		// });
+
+
+		// const formSec = $('#wpcf7-f635-o1 form');
+
+		// formSec.validate({
+		// 	rules: {
+		// 		name_1 : {
+		// 			required: true
+		// 		},
+		// 		email_1: {
+		// 			required: true,
+		// 			email: true
+		// 		},
+		// 		message_1: {
+		// 			required: true
+		// 		}
+		// 	},
+		// 	message: {
+		// 		name_1: {
+		// 			required: ''
+		// 		},
+		// 		email_1: {
+		// 			required: '',
+		// 			email: ''
+		// 		},
+		// 		message_1: {
+		// 			required: ''
+		// 		}
+		// 	}
+		// });
+
+
+		// const formThird = $('#wpcf7-f635-o2 form');
+
+		// formThird.validate({
+		// 	rules: {
+		// 		name_1 : {
+		// 			required: true
+		// 		},
+		// 		email_1: {
+		// 			required: true,
+		// 			email: true
+		// 		},
+		// 		message_1: {
+		// 			required: true
+		// 		}
+		// 	},
+		// 	message: {
+		// 		name_1: {
+		// 			required: ''
+		// 		},
+		// 		email_1: {
+		// 			required: '',
+		// 			email: ''
+		// 		},
+		// 		message_1: {
+		// 			required: ''
+		// 		}
+		// 	}
+		// });
 
 
 	function pageWidget(pages) {

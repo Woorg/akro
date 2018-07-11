@@ -1,3 +1,10 @@
+include ../form/form
+
+
 mixin cta()
-	+b.cta&attributes(attributes)
-		block
+	section.cta&attributes(attributes)
+		.cta__in
+			h2.cta__title Оставьте заявку
+			.cta__text Позвоните нам по номеру +7 (495) 220-21-25 <br/>или заполните форму ниже
+			+form().cta__form
+

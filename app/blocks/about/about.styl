@@ -1,2 +1,37 @@
 .about
+	position relative
 	display block
+	&:after,
+	&:before
+		position absolute
+		z-index -1
+		top 0
+		min-height 542px
+		content ''
+	&:before
+		left 0
+		width 50%
+		background-color #00c6d7
+	&:after
+		right 0
+		width 50%
+		background url('../images/content/about-bg.jpg') 100% 0 no-repeat
+	&__in
+		@extends .in
+		padding-top 100px
+		padding-bottom 100px
+	&__content
+		max-width 458px
+		color #fff
+	&__title
+		@extends .title
+		margin-bottom 43px
+	&__text
+		margin-bottom 30px
+		line-height 1.5625
+	&__button
+		border 2px solid #fff
+		background transparent
+		&:hover
+			background #fff
+			color #00c6d7

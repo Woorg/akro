@@ -1,0 +1,27 @@
+extends /blocks/layout-default/layout-contacts
+
+include /blocks/header/header
+
+include /blocks/main/main
+include /blocks/contacts/contacts
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Контакты - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+main()
+		.main__in
+			h1.main__title Контакты
+
+		+contacts()
+
+	+cta()
+	+footer()
+
+

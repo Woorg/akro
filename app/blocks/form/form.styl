@@ -1,2 +1,87 @@
 .form
 	display block
+	&__row
+		margin-bottom 20px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+		&:last-child
+			margin-bottom 0
+	&__row_fe
+		justify-content flex-end
+	&__col
+		margin-right 20px
+		width 40%
+		&:last-child
+			margin-right 0
+	&__col_wide
+		width 57%
+	&__field
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+	&__input
+		border none
+		padding-left 20px
+		padding-right 20px
+		background #fff
+		width 100%
+		height 42px
+		+placeholder()
+			color #888888
+	&__textarea
+		border none
+		padding-top 10px
+		padding-left 20px
+		padding-right 20px
+		width 100%
+		min-height 166px
+		background #fff
+		+placeholder()
+			color #888888
+	&__note
+		position relative
+		margin-right 50px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+		line-height 1
+	&__note-text
+		font-size 16px
+
+	&__note-label
+		position absolute
+		top 5px
+		left -30px
+		width 22px
+		height 22px
+		cursor pointer
+		&:after,
+		&:before
+			position absolute
+			top 0
+			left 0
+			content ''
+			width 22px
+			height 22px
+			background url('../images/general/checkbox.svg') 0 0 / cover no-repeat
+		&:before
+			display none
+			background url('../images/general/checkbox-checked.svg') 0 0 / cover no-repeat
+
+	&__checkbox
+		display none
+		&:checked ~
+			.form__note-label
+				&:after
+					display none
+				&:before
+					display block
+
+	&__submit
+		padding 10px
+		padding-bottom 10px
+		padding-left 20px
+		padding-right 20px

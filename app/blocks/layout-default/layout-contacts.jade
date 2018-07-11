@@ -1,0 +1,44 @@
+include /../node_modules/bemto.jade/bemto
+include /../node_modules/jade-injected/jade-injected
+include ../page/page
+include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page._inner
+		block content
+		+scripts(['//api-maps.yandex.ru/2.1/?lang=ru_RU', 'app.min.js'])
+
+		script.
+			ymaps.ready(init);
+
+			var myMap;
+			var myPlacemark;
+
+			function init()
+			{
+
+				myMap = new ymaps.Map("map",
+				{
+
+
+					center: [55.654508, 37.574516],
+					zoom: 17,
+					controls: ["zoomControl"]
+				});
+
+				myPlacemark = new ymaps.Placemark([55.654508, 37.574516],
+				{
+					iconCaption: 'Москва, Каховская улица'
+
+				},
+				{
+					preset: 'islands#redIcon'
+
+				});
+
+				myMap.geoObjects.add(myPlacemark);
+				myMap.behaviors.disable('scrollZoom');
+
+			}

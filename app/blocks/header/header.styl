@@ -1,2 +1,55 @@
 .header
+	position absolute
+	z-index 1
+	top 0
+	left 0
+	right 0
 	display block
+	&:after
+		position absolute
+		top 0
+		left 0
+		right 0
+		content ''
+		min-height 168px
+		background-image linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%)
+	&__in
+		position relative
+		z-index 1
+		@extends .in
+	&__top
+		padding-top 43px
+		padding-bottom 43px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	// &__logo
+	// 	max-width 356px
+	&__nav
+		max-width 598px
+	&__bottom
+		display flex
+		flex-flow row wrap
+		-webkit-justify-content flex-end
+		justify-content flex-end
+		align-items center
+	&__phone
+		margin-right 30px
+	// &__button
+
+.phone
+	font-family $mR
+	font-size 24px
+	color #FFF
+	line-height 1
+	text-decoration none
+	&__icon
+		margin-right 6px
+		width 18px
+		height 18px
+		fill #fff
+
+
+
+

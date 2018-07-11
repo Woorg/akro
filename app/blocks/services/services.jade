@@ -1,29 +1,30 @@
 include ../icon/icon
 
-
 mixin services()
 	section.services&attributes(attributes)
+
 		.services__in
 			h2.services__title Наши услуги
-			ul.services__list
-				li.services__item
-					a.services__link(href="#")
-						.services__top
-							.services__num 1
-						.services__item-title Разработка сайтов
-						.services__button
-							+icon('right-arrow', true).services__button-icon
-				li.services__item
-					a.services__link(href="#")
-						.services__top
-							.services__num 2
-						.services__item-title Брендинг
-						.services__button
-							+icon('right-arrow', true).services__button-icon
-				li.services__item
-					a.services__link(href="#")
-						.services__top
-							.services__num 3
-						.services__item-title Продвижение сайтов
-						.services__button
-							+icon('right-arrow', true).services__button-icon
+
+		ul.services__list
+			li.services__item(style="background: url('assets/images/content/service-1.jpg');")
+				a.services__link(href="#")
+					.services__top
+						.services__num 01
+					.services__item-title Разработка <br/>сайтов
+					.services__button
+						+icon('right-arrow', true).services__button-icon
+			li.services__item(style="background: url('assets/images/content/service-2.jpg');")
+				a.services__link(href="#")
+					.services__top
+						.services__num 02
+					.services__item-title Брендинг
+					.services__button
+						+icon('right-arrow', true).services__button-icon
+			li.services__item(style="background: url('assets/images/content/service-3.jpg');")
+				a.services__link(href="#")
+					.services__top
+						.services__num 03
+					.services__item-title Продвижение <br/>сайтов
+					.services__button
+						+icon('right-arrow', true).services__button-icon

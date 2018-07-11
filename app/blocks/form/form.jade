@@ -1,3 +1,23 @@
 mixin form()
-	+b.form&attributes(attributes)
-		block
+	.form&attributes(attributes)
+		form(action="", method="post")
+			.form__row
+				.form__col.form__row_jc
+					.form__field
+						input.form__input(type="text", value="", name="a_name", placeholder="Ваше имя")
+					.form__field
+						input.form__input(type="text", value="", name="a_phone", placeholder="Номер телефона")
+					.form__field
+						input.form__input(type="text", value="", name="a_email", placeholder="Электронная почта")
+				.form__col.form__col_wide
+					.form__field
+						textarea.form__textarea(name="a_message" placeholder="Сообщение")
+
+			.form__row.form__row_fe
+				.form__note
+					input#note.form__checkbox(type="checkbox" checked)
+					label.form__note-label(for="note")
+					.form__note-text Я согласен с условиям обработки <br/>персональных данных
+
+				input.form__submit.button(type="submit", value="Отправить заявку")
+

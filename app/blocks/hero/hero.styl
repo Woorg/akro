@@ -1,2 +1,77 @@
 .hero
+	position relative
+	z-index 0
 	display block
+	&__slider
+		color #fff
+		display flex
+		overflow hidden
+	&__item
+		position relative
+		// height 100vh
+		height 768px
+		background-position 50% 0
+		background-repeat no-repeat
+		background-size cover
+	&__in
+		position relative
+		@extends .in
+		padding-top 208px
+		height 100%
+	// &__w
+	// 	position absolute
+	// 	top calc(50% + 33px)
+	// 	left 0
+	// 	max-width 780px
+	// 	transform translateY(-50%)
+	&__title
+		@extends .title
+		margin-top 33px
+		margin-bottom 43px
+		span
+			font-family $mB
+	&__text
+		margin-bottom 30px
+		max-width 556px
+	// &__button
+
+section.hero
+	.hero__slider
+		margin-bottom 0
+	.hero__item
+		background-position 50% 0
+		background-repeat no-repeat
+		background-size cover
+	.slick-dots
+		position absolute
+		@extends .in
+		z-index 1
+		top 200px
+		// left 30px
+		left 50%
+		bottom auto
+		text-align left
+		transform translateX(-50%)
+		li
+			position relative
+			padding-right 16px
+			width auto
+			height auto
+			font-family $mB
+			font-size 16px
+			&:after
+				position relative
+				top 0
+				right -16px
+				content '/'
+				color rgba(255, 255, 255, 0.7)
+			&:last-child
+				&:after
+					display none
+		.slick-active
+			a
+				color #fff
+				tr(all .3s ease)
+		a
+			color #00c6d7
+			tr(all .3s ease)
