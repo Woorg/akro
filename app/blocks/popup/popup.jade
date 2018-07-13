@@ -1,0 +1,10 @@
+include ../form/form
+
+mixin popup()
+	.popup&attributes(attributes)
+		.popup__in
+			h2.popup__title Оставьте заявку
+			.popup__text Позвоните нам по номеру +7 (495) 220-21-25 <br/>или заполните форму ниже
+			+form().form_popup.popup__form
+
+

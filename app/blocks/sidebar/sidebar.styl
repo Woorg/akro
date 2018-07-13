@@ -1,7 +1,12 @@
 .sidebar
-	display block
+	// display block
 	&__block
 		margin-bottom 30px
+		+r($tL)
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+			// width 47.5%
 		&:last-child
 			margin-bottom 0
 	&__title
@@ -9,3 +14,5 @@
 		color #fff
 		font-size 24px
 		text-transform uppercase
+		+r($tL)
+			display none

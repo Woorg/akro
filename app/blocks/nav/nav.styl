@@ -1,7 +1,6 @@
 .nav
 	position relative
 	max-width 600px
-	display block
 	+r($tL)
 		position static
 		max-width 100%
@@ -15,11 +14,22 @@
 		width 43px
 		height 30px
 		fill #00c6d7
+		+r($m)
+			position relative
+			top 5px
+			width 29px
+			height 20px
 	&__trigger-close
 		display none
 		width 43px
 		height 39px
 		fill #00c6d7
+		+r($m)
+			position relative
+			top 0
+			right 0
+			width 21px
+			height 28px
 	&__checkbox
 		display none
 		&:checked ~
@@ -35,6 +45,19 @@
 				display block
 				background #000
 				font-size 24px
+				+r($m)
+					top 69px
+					padding-left 15px
+					padding-right 15px
+				+rmin($tL)
+					position static
+					padding-top 0
+					padding-bottom 0
+					padding-right 0
+					padding-left 0
+					display flex
+					background transparent
+					font-size 16px
 
 	&__list
 		display flex
@@ -42,6 +65,8 @@
 		justify-content flex-start
 		+r($tL)
 			display none
+		+rmin($tL)
+			display flex
 	&__item
 		margin-right 37px
 		text-transform uppercase
@@ -68,10 +93,20 @@
 		+r($tL)
 			padding-top 50px
 			display flex
+		+r($m)
+			justify-content center
 
 	.nav__item
 		font-family $mR
 		&:last-child
 			margin-right 0
+			+r($m)
+				margin-bottom 0
 		+r($tL)
 			margin-right 36px
+		+r($m)
+			margin-right 0
+			margin-bottom 10px
+			width 100%
+			text-align center
+

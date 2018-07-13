@@ -10,6 +10,8 @@
 		background-position 50% 0
 		background-size cover
 		color #fff
+		+r($m)
+			display none
 		&:after
 			position absolute
 			top 0
@@ -36,12 +38,20 @@
 		padding-bottom 50px
 		padding-left 50px
 		color #000
-
+		+r($tL)
+			padding-right 50px
+			padding-bottom 30px
+		+r($m)
+			padding-left 15px
+			padding-right 15px
 		.article__title
-			margin-bottom 11px
+			margin-bottom 25px
 			color #000
 			font-size 36px
 			font-family $mB
+			+r($m)
+				margin-bottom 15px
+				font-size 18px
 		.article__text
 			font-size 18px
 			line-height 1.6
@@ -49,6 +59,11 @@
 
 	&_side
 		margin-bottom 30px
+		+r($tL)
+			width 47.5%
+		&:last-child
+			+r($tL)
+				display none
 
 	&__link
 		display block
@@ -56,7 +71,15 @@
 		text-decoration none
 
 	&__image
+		// height 200px
+		// min-height 200px
+		// max-height 200px
 		text-align center
+		overflow hidden
+		+r($tL)
+			height auto
+		// +r($mS)
+		// 	height auto
 		img
 			display inline-block
 			vertical-align top
@@ -67,6 +90,9 @@
 		padding-right 30px
 		padding-bottom 30px
 		padding-left 30px
+		+r($m)
+			padding-left 15px
+			padding-right 15px
 	&__title
 		margin-bottom 5px
 		font-size 18px

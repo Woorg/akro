@@ -1,9 +1,17 @@
 .articles
 	margin-top 45px
 	padding-bottom 20px
+	+r($m)
+		margin-top (46px/2)
+		margin-left -15px
+		margin-right -15px
 	&__article,
 	&__sizer
 		width 31.5789473684211%
+		+r($tL)
+			width 47.5%
+		+r($m)
+			width 100%
 	&__article
 		margin-bottom 30px
 		// min-height 423px

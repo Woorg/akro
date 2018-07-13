@@ -1,4 +1,6 @@
 include ../icon/icon
+include ../popup/popup
+
 
 mixin header()
 	header.header&attributes(attributes)
@@ -31,4 +33,7 @@ mixin header()
 				a.header__phone.phone(href="tel:74952202125")
 					+icon('phone', true).phone__icon
 					| +7 (495) 220-21-25
-				a.header__button.button(href="#callback") Заказать звонок
+				a.header__button.button.popup-open(href="#callback") Заказать звонок
+				a.header__button.header__button_sec.button(href="#") Заказать звонок
+
+			+popup().popup_mobile

@@ -7,6 +7,9 @@
 		position relative
 		padding-top 290px
 		height 768px
+		+r($tL)
+			padding-top 160px
+			height 480px
 		&:after
 			position absolute
 			top 0
@@ -20,13 +23,24 @@
 		@extends .in
 		z-index 1
 		height 100%
+		+r($tL)
+			padding-left 57px
+			padding-right 57px
+		+r($m)
+			padding-left 15px
+			padding-right 15px
+
 	&__title
 		@extends .title
 		margin-bottom 20px
 		letter-spacing 4px
+		+r($m)
+			margin-bottom 10px
+			letter-spacing 1.13px
 	&__subtitle
 		font-size 20px
-
+		+r($m)
+			font-size 16px
 	&__link
 		position absolute
 		bottom 30px
@@ -56,16 +70,29 @@
 		position absolute
 		right -98px
 		bottom -50px
-
+		+r($tL)
+			right -278px
+		+r($m)
+			display none
+	&__laptop-mob
+		display none
+		+r($m)
+			margin-bottom 40px
+			display block
 	&__body
 		padding-top 80px
 		padding-bottom 100px
 		background #000
-
+		+r($m)
+			padding-top (80px/2)
+			padding-bottom (100px/2)
 	&__title-h2
 		@extends .title
 		margin-bottom 46px
 		letter-spacing 4px
+		+r($m)
+			margin-bottom (46px/2)
+			letter-spacing 1.12px
 
 	&__row
 		margin-bottom 70px
@@ -73,11 +100,19 @@
 		flex-flow row wrap
 		justify-content space-between
 		align-items flex-start
+		+r($m)
+			margin-bottom (70px/2)
 	&__col
 		margin-right 30px
 		width 48.5%
+		+r($tL)
+			margin-right 0
+			margin-bottom 30px
+			width 100%
 		&:last-child
 			margin-right 0
+			+r($m)
+				margin-bottom 0
 
 	&__text
 		font-size 18px
@@ -85,5 +120,11 @@
 
 	&__browser
 		position relative
+		+r($tL)
+			margin-left -32px
+			margin-right -32px
+		+r($m)
+			margin-left 0
+			margin-right 0
 	&__browser-page
 		margin-top -3px

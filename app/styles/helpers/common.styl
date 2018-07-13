@@ -17,6 +17,8 @@
 	&_portfolio-single
 		.header
 			position absolute
+		.header__top
+			border-bottom none
 
 img
 	display block
@@ -34,6 +36,9 @@ img
 	+r($tL)
 		padding-left 24px
 		padding-right 24px
+	+r($m)
+		padding-left 15px
+		padding-right 15px
 // Links
 
 // a:link
@@ -43,9 +48,9 @@ img
 
 .button
 	border none
-	padding-top 15px
+	padding-top 16px
 	padding-right 30px
-	padding-bottom 17px
+	padding-bottom 15px
 	padding-left 30px
 	display inline-block
 	vertical-align top
@@ -78,18 +83,23 @@ img
 	letter-spacing 3px
 	+r($tL)
 		font-size 48px
+		letter-spacing 2.25px
 	+r($m)
 		font-size 24px
+		letter-spacing 1.13px
 
 // wysiwyg editor styles
 
 .wysiwyg
 	p
-		margin-bottom 28px
+		margin-bottom 35px
 		font-size 18px
 		line-height 1.6
+		&:last-child
+			margin-bottom 0
 
 	img
+		margin-bottom 35px
 		max-width 100%
 		height auto
 

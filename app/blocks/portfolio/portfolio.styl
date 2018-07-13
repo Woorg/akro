@@ -1,18 +1,33 @@
 .portfolio
 	padding-top 46px
 	display block
+	+r($tL)
+		padding-top 36px
 	&__filter
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
 		align-items flex-start
+		+r($tL)
+			padding-left 32px
+			padding-right 0
+		+r($m)
+			padding-left 0
 	&__item
 		position relative
 		font-size 36px
+		+r($tL)
+			font-size 24px
+		+r($m)
+			margin-bottom 15px
+			width 100%
+			font-size 16px
 		&:first-child
 			.portfolio__link
 				padding-left 0
 		&:last-child
+			+r($m)
+				margin-bottom 0
 			.portfolio__link
 				padding-right 0
 				&:after
@@ -27,6 +42,12 @@
 		color #00c6d7
 		text-decoration none
 		tr(all .3s ease)
+		+r($tL)
+			padding-left 20px
+			padding-right 20px
+		+r($m)
+			padding-left 0
+			padding-right 0
 		&:after
 			position absolute
 			top 0
@@ -35,6 +56,11 @@
 			width 1px
 			height 100%
 			background #fff
+			+r($tL)
+				top 2px
+				height 80%
+			+r($m)
+				display none
 		&:hover
 			color #fff
 			tr(all .3s ease)

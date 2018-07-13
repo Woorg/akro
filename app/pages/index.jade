@@ -10,7 +10,7 @@ include /blocks/testimonials/testimonials
 include /blocks/cta/cta
 
 include /blocks/footer/footer
-
+include /blocks/popup/popup
 
 block head
 	- var pageTitle = 'Akro - Digital-агентство полного цикла';
@@ -25,4 +25,4 @@ block content
 	+cta()
 	+footer()
 
-
+	+popup()#callback.mfp-hide

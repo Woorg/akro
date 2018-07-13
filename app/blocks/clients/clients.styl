@@ -4,9 +4,17 @@
 	padding-bottom 30px
 	display block
 	overflow hidden
+	+r($m)
+		padding-top (82px/2)
+		padding-bottom 0
 	&__title
 		@extends .title
 		margin-bottom 32px
+		+r($tL)
+			margin-bottom 40px
+			padding-left 33px
+		+r($m)
+			padding-left 0
 	&__list
 		margin-right -32px
 		display flex
@@ -16,6 +24,10 @@
 	&__item
 		margin-right 30px
 		margin-bottom 30px
+		&:last-child
+			+r($m)
+				margin-bottom 0
+
 	&__link
 		display block
 		color #000

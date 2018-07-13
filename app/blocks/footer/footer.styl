@@ -8,6 +8,9 @@
 		+r($tL)
 			padding-left 57px
 			padding-right 57px
+		+r($m)
+			padding-left 15px
+			padding-right 15px
 	&__top
 		padding-top 52px
 		padding-bottom 53px
@@ -15,6 +18,15 @@
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
+		+r($m)
+			justify-content center
+	.footer__logo
+		+r($m)
+			width 160px
+			height 23px
+	.logo__brand
+		+r($m)
+			height 23px
 	&__nav
 		max-width 598px
 	&__bottom
@@ -29,8 +41,15 @@
 			padding-top 30px
 			padding-bottom 25px
 			justify-content flex-start
+		+r($m)
+			padding-top 50px
+			padding-bottom 50px
+			justify-content center
+
 	&__phone
 		margin-right 30px
+		+r($m)
+			margin-right 0
 
 	&__copyright
 		color #8B8B8B
@@ -38,6 +57,8 @@
 		+r($tL)
 			margin-top 20px
 			width 100%
+		+r($m)
+			text-align center
 
 	&__copyright-link
 		color #8B8B8B
@@ -48,12 +69,21 @@
 	&__contacts
 		+r($tL)
 			order -1
+		+r($m)
+			text-align center
 
 	&__phone
 		margin-right 60px
-
-	// &__email
-
+		+r($m)
+			margin-bottom 30px
+			margin-right 0
+			display inline-block
+			vertical-align top
+	&__email
+		+r($m)
+			margin-bottom 16px
+			display inline-block
+			vertical-align top
 
 .email
 	position relative
@@ -71,3 +101,4 @@
 		width 24px
 		height 20px
 		fill #fff
+

@@ -5,12 +5,19 @@
 		@extends .in
 		padding-top 80px
 		padding-bottom 100px
+		+r($m)
+			padding-top (80px/2)
+			padding-bottom (100px/2)
 	&__title
 		@extends .title
 		margin-bottom 36px
 		+r($tL)
 			padding-left 33px
 			padding-right 33px
+		+r($m)
+			margin-bottom (36px/2)
+			padding-left 0
+			padding-right 0
 	&__slider
 		max-width 754px
 		margin-left -50px
@@ -18,15 +25,22 @@
 			margin-left 20px
 			margin-bottom 30px
 			max-width 100%
+		+r($m)
+			margin-left 0
 	&__item
 		padding-left 50px
 		padding-right 50px
 		color #fff
-
+		+r($m)
+			padding-left 0
+			padding-right 0
 	&__name
 		margin-bottom 25px
 		font-family $aB
 		font-size 24px
+		+r($m)
+			margin-bottom (25px/2)
+
 	&__text
 		position relative
 		line-height 1.5

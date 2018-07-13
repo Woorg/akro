@@ -2,32 +2,54 @@
 	padding-bottom 100px
 	display block
 	color #fff
+	+r($tL)
+		padding-left 32px
+	+r($m)
+		padding-top 15px
+		padding-bottom (100px/2)
+		padding-left 0
 	&__title
 		margin-top 48px
 		margin-bottom 38px
 		font-size 36px
 		line-height 1.5
+		+r($m)
+			display none
 	&__row
 		margin-bottom 44px
 		max-width 760px
 		clr()
+		+r($m)
+			margin-bottom 30px
 	&__list
 		position relative
 		padding-left 196px
+		+r($m)
+			padding-left 0
 	&__term
 		position absolute
 		top 0
 		left 0
 		font-size 18px
 		font-family $mB
+		+r($m)
+			margin-bottom 15px
+			position static
 	&__desc
 		font-size 18px
 		line-height 1.6
 	&__list-col
 		float left
 		width 50%
+		+r($m)
+			float none
+			width 100%
 	&__purpose
 		font-size 36px
 		line-height 1.5
+		+r($tL)
+			font-size 24px
+		+r($m)
+			font-size 18px
 		strong
 			font-family $mB

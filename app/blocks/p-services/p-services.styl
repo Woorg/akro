@@ -2,11 +2,22 @@
 	margin-top 48px
 	display block
 	color #fff
+	+r($tL)
+		padding-left 32px
+		padding-right 32px
+	+r($m)
+		margin-top (48px/2)
+		padding-left 0
+		padding-right 0
 	&__text
 		margin-bottom 42px
 		max-width 600px
 		font-size 18px
 		line-height 1.6
+		+r($tL)
+			margin-bottom 0
+		+r($m)
+			margin-bottom (42px/2)
 	&__service
 		padding-top 50px
 		padding-bottom 50px
@@ -14,37 +25,57 @@
 		flex-flow row wrap
 		justify-content space-between
 		align-self flex-start
+		+r($tL)
+			max-width 600px
 	&__service_odd
 		.p-services__service-content
 			order -1
+			+r($tL)
+				order 0
 		.p-services__service-img
 			padding-right 30px
 			text-align right
+			+r($tL)
+				padding-right 0
+				text-align left
 	&__service_even
 		.p-services__service-content
 			order 1
 		.p-services__service-img
 			padding-left 30px
 			text-align left
+			+r($tL)
+				padding-left 0
 		.p-services__service-text
 			margin-bottom 30px
 	// &__service-w
 	&__service-title
 		margin-bottom 10px
 		font-size 36px
-
+		+r($m)
+			margin-bottom 15px
+			font-size 24px
 	// &__service-content
 	// 	margin-right 30px
 	&__service-text
 		margin-bottom 50px
 		font-size 18px
 		line-height 1.6
+		+r($m)
+			margin-bottom 10px
 	&__service-content,
 	&__service-img
 		flex 1 1 48%
+		+r($tL)
+			flex 1 1 100%
 	&__service-img
 		padding-top 22px
 		text-align center
+		+r($tL)
+			margin-bottom 20px
+			padding-top 0
+			order -1
+			text-align left
 		img
 			display inline-block
 			vertical-align top

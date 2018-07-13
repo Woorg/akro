@@ -6,11 +6,20 @@
 		flex-flow row wrap
 		justify-content flex-start
 		align-items flex-start
+		// +r($m)
+		// 	white-space nowrap
 	&__item
 		&:first-child
 			.breadcrumbs__link
 				padding-left 0
+		&:nth-child(2)
+			.breadcrumbs__link
+				&:after
+					display none
+
 		&:last-child
+			+r($m)
+				display none
 			.breadcrumbs__link
 				padding-right 0
 				&:after
