@@ -1,33 +1,43 @@
 .footer
 	display block
 	background #333
+	+r($tL)
+		overflow hidden
 	&__in
 		@extends .in
+		+r($tL)
+			padding-left 57px
+			padding-right 57px
 	&__top
-		padding-top 46px
-		padding-bottom 56px
+		padding-top 52px
+		padding-bottom 53px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
-	// &__logo
-	// 	max-width 356px
 	&__nav
 		max-width 598px
 	&__bottom
 		border-top 1px solid #535454
-		padding-top 40px
+		padding-top 44px
 		padding-bottom 50px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
+		+r($tL)
+			padding-top 30px
+			padding-bottom 25px
+			justify-content flex-start
 	&__phone
 		margin-right 30px
 
 	&__copyright
 		color #8B8B8B
 		font-size 14px
+		+r($tL)
+			margin-top 20px
+			width 100%
 
 	&__copyright-link
 		color #8B8B8B
@@ -35,7 +45,9 @@
 		&:hover
 			text-decoration none
 
-	// &__contacts
+	&__contacts
+		+r($tL)
+			order -1
 
 	&__phone
 		margin-right 60px
@@ -44,14 +56,17 @@
 
 
 .email
+	position relative
+	padding-left 34px
 	font-family $mR
 	font-size 24px
 	color #FFF
 	line-height 1
 	text-decoration none
 	&__icon
-		position relative
-		top 3px
+		position absolute
+		top 0
+		left 0
 		margin-right 10px
 		width 24px
 		height 20px

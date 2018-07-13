@@ -1,0 +1,42 @@
+.portfolio
+	padding-top 46px
+	display block
+	&__filter
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items flex-start
+	&__item
+		position relative
+		font-size 36px
+		&:first-child
+			.portfolio__link
+				padding-left 0
+		&:last-child
+			.portfolio__link
+				padding-right 0
+				&:after
+					display none
+	&__item_current
+		.portfolio__link
+			color #fff
+	&__link
+		position relative
+		padding-left 30px
+		padding-right 30px
+		color #00c6d7
+		text-decoration none
+		tr(all .3s ease)
+		&:after
+			position absolute
+			top 0
+			right 0
+			content ''
+			width 1px
+			height 100%
+			background #fff
+		&:hover
+			color #fff
+			tr(all .3s ease)
+
+

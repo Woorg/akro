@@ -1,0 +1,31 @@
+.breadcrumbs
+	margin-bottom 12px
+	color #fff
+	&__list
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items flex-start
+	&__item
+		&:first-child
+			.breadcrumbs__link
+				padding-left 0
+		&:last-child
+			.breadcrumbs__link
+				padding-right 0
+				&:after
+					display none
+	&__link
+		position relative
+		padding-left 13px
+		padding-right 15px
+		color #fff
+		text-decoration none
+		&:after
+			position absolute
+			top 0
+			right 0
+			content ''
+			width 1px
+			height 100%
+			background #fff

@@ -1,0 +1,75 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+
+include /blocks/main/main
+include /blocks/content/content
+include /blocks/sidebar/sidebar
+include /blocks/article/article
+
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Обзор интерфейса Invision Studio - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+main()
+		.main__in
+			h1.main__title Блог
+			.main__w
+				+content().main__content
+					+article()._single
+						.article__title Обзор интерфейса Invision Studio
+						.article__text
+							p InVision выпустил в «ранний доступ» редактор InVision Studio, который по замыслу разработчиков должен стать конкурентом для Sketch и служить в качестве основного инструмента для интерактивного дизайна и создания прототипов. Специально для Awdee я написал обзор этого инструмента и рассказал о своих впечатлениях.
+
+							p Я давно слежу за этой компанией и много пользовался её продуктами. В своём обзоре я постараюсь быть объективен и избегать своего личного мнения о InVision.
+
+							p Ощущения от работы в InVision Studio интересные. С одной стороны, это старый добрый Sketch в урезанном виде. С другой, в нём есть что-то новое и переосмысленное, чего не хватает в Sketch.
+
+							p Импорт скетч-файлов <br/>Представим реальную ситуацию, когда дизайнер по какой-то причине недоволен Sketch и хочет поменять его на InVision Studio.
+
+							p Первое, что бросается в глаза — в приветственном окне InVision видны все скетч-файлы, которые вы недавно открывали в Sketch. Таким образом, InVision обещает полноценно открывать скетч-файлы.
+
+							p Естественно, обратно в Sketch их сохранить нельзя. Война редакторов бъёт исключительно по пользователям.
+
+							p InVision Studio работает на Windows <br/>То, что InVision Studio кроссплатформенный — огромное стратегическое преимущество перед Sketch. Это может значительно расширить аудиторию до всех тех дизайнеров, кто не жаелает покупать потёртый Macbook Pro на Avito. Однако, опыт Adobe Experience Design показывает, что мало иметь версию на обе платформы, чтобы конкурировать со Sketch. Нужно ещё давать необходимый минимум полезных функций.
+
+							p Работаем со скетч-макетом <br/>Специально для этого обзора я создал простой скетч-макет, на котором пофантазировал на тему редизайна Awdee для мобильной ширины. Его можно скачать по ссылке на Sketch Cloud.
+				+sidebar().main__sidebar
+					.sidebar__block
+						h2.sidebar__title Популярные записи
+						article.article.article_side
+							a.article__link(href="#link")
+								.article__image
+									img(src="assets/images/content/article-img-2.jpg", alt="")
+								.article__w
+									.article__title Ошибки молодых дизайнеров
+									.article__text Речь пойдет о тех распространенных ошибках, которые допускают начинающие дизайнеры.
+									.article__button.button.button_sec Читать
+						article.article.article_side
+							a.article__link(href="#link")
+								.article__image
+									img(src="assets/images/content/article-img-4.jpg", alt="")
+								.article__w
+									.article__title 4 правила работы в Sketch над крупными проектами
+									.article__text Эти правила и приёмы помогут команде при работе над крупным проектом.
+									.article__button.button.button_sec Читать
+						article.article.article_side
+							a.article__link(href="#link")
+								.article__image
+									img(src="assets/images/content/article-img-1.jpg", alt="")
+								.article__w
+									.article__title Деньги и дизайн
+									.article__text Как зарабатывать больше, если ты работаешь один
+									.article__button.button.button_sec Читать
+
+	+cta()
+	+footer()
+
+

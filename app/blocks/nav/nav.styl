@@ -1,15 +1,54 @@
 .nav
+	position relative
 	max-width 600px
 	display block
+	+r($tL)
+		position static
+		max-width 100%
+	&__trigger
+		position relative
+		display none
+		cursor pointer
+		+r($tL)
+			display block
+	&__trigger-open
+		width 43px
+		height 30px
+		fill #00c6d7
+	&__trigger-close
+		display none
+		width 43px
+		height 39px
+		fill #00c6d7
+	&__checkbox
+		display none
+		&:checked ~
+			.nav__list
+				position absolute
+				top 128px
+				left 0
+				right 0
+				padding-top 50px
+				padding-right 24px
+				padding-left 50px
+				padding-bottom 65px
+				display block
+				background #000
+				font-size 24px
+
 	&__list
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
+		+r($tL)
+			display none
 	&__item
-		margin-right 36px
+		margin-right 37px
 		text-transform uppercase
 		font-family $mB
 		&:last-child
+			margin-right 0
+		+r($tL)
 			margin-right 0
 	.current-item
 		.nav__link
@@ -25,5 +64,14 @@
 			tr(all .3s ease)
 
 .nav_sec
+	.nav__list
+		+r($tL)
+			padding-top 50px
+			display flex
+
 	.nav__item
 		font-family $mR
+		&:last-child
+			margin-right 0
+		+r($tL)
+			margin-right 36px

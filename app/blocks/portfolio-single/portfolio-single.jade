@@ -1,0 +1,32 @@
+include ../breadcrumbs/breadcrumbs
+
+mixin portfolio-single()
+	.portfolio-single&attributes(attributes)
+		.portfolio-single__top
+			.portfolio-single__in
+				+breadcrumbs()
+				h1.portfolio-single__title Контраст плюс
+				.portfolio-single__subtitle Консалтинг и логистика в Китае
+
+				a.portfolio-single__link(href="#link") www.contrast.plus
+
+				.portfolio-single__laptop
+					img(src="assets/images/content/portfolio-single-thumb.png", alt="Контраст плюс")
+
+		.portfolio-single__body
+			.portfolio-single__in
+				h2.portfolio-single__title-h2 Задача проекта
+
+				.portfolio-single__row
+					.portfolio-single__col
+						.portfolio-single__text Контраст Плюс — это китайская экспортно-импортная компания, предлагающая широкий спектр бизнес-услуг с Китаем. Центральный офис находится в городе Шэньчжэнь (Южный Китай), открыты представительства в Москве и Владивостоке. Мы разработали для них новый сайт, который информирует существующих и потенциальных клиентах о деятельности компании.
+					.portfolio-single__col
+						.portfolio-single__text Контраст Плюс — это китайская экспортно-импортная компания, предлагающая широкий спектр бизнес-услуг с Китаем. Центральный офис находится в городе Шэньчжэнь (Южный Китай), открыты представительства в Москве и Владивостоке. Мы разработали для них новый сайт, который информирует существующих и потенциальных клиентах о деятельности компании.
+
+				h2.portfolio-single__title-h2 Главная страница
+
+				.portfolio-single__browser
+					.portfolio-single__browser-frame
+						img(src="assets/images/general/browser-frame.svg", alt="")
+					.portfolio-single__browser-page
+						img(src="assets/images/content/case-main-page.jpg", alt="Главная страница")

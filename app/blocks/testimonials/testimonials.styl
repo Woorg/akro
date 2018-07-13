@@ -3,13 +3,21 @@
 	&__in
 		position relative
 		@extends .in
-		padding-top 100px
+		padding-top 80px
 		padding-bottom 100px
 	&__title
 		@extends .title
-		margin-bottom 63px
+		margin-bottom 36px
+		+r($tL)
+			padding-left 33px
+			padding-right 33px
 	&__slider
 		max-width 754px
+		margin-left -50px
+		+r($tL)
+			margin-left 20px
+			margin-bottom 30px
+			max-width 100%
 	&__item
 		padding-left 50px
 		padding-right 50px
@@ -21,6 +29,7 @@
 		font-size 24px
 	&__text
 		position relative
+		line-height 1.5
 		&:after,
 		&:before
 			position absolute
@@ -29,24 +38,25 @@
 			height 27px
 			background url('../images/general/quote-left.svg') 0 0 / cover no-repeat
 		&:before
-			top 0
+			top -6px
 			left -50px
 		&:after
-			bottom 0
+			bottom 6px
 			right -50px
 			transform rotate(-180deg)
 
-
 	&__nav
 		position absolute
-		right 0
+		right 16px
 		bottom 170px
 		width 142px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items flex-start
-
+		+r($tL)
+			position static
+			margin auto
 	.slick-arrow
 		position static
 		top 0

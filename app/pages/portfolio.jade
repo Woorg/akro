@@ -1,0 +1,29 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+
+include /blocks/main/main
+include /blocks/portfolio/portfolio
+include /blocks/works/works
+
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Услуги - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+main()
+		.main__in
+			h1.main__title Портфолио
+			+portfolio()
+
+		+works-page().works_sec
+	+cta()
+	+footer()
+
+

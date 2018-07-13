@@ -1,0 +1,25 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+
+include /blocks/main/main
+include /blocks/articles/articles
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'БЛОГ - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+main()
+		.main__in
+			h1.main__title Блог
+			+articles()
+	+cta()
+	+footer()
+
+

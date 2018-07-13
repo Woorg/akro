@@ -1,0 +1,82 @@
+.article
+	display block
+	background #fff
+	&_fixed
+		position relative
+		padding-top 38px
+		padding-right 50px
+		padding-bottom 30px
+		padding-left 50px
+		background-position 50% 0
+		background-size cover
+		color #fff
+		&:after
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			left 0
+			content ''
+			background rgba(0,0,0, .3)
+
+		.article__title,
+		.article__text
+			position relative
+			z-index 1
+			max-width 600px
+		.article__title
+			margin-bottom 10px
+			font-size 36px
+		.article__text
+			margin-bottom 0
+
+	&_single
+		padding-top 38px
+		padding-right 110px
+		padding-bottom 50px
+		padding-left 50px
+		color #000
+
+		.article__title
+			margin-bottom 11px
+			color #000
+			font-size 36px
+			font-family $mB
+		.article__text
+			font-size 18px
+			line-height 1.6
+			@extends .wysiwyg
+
+	&_side
+		margin-bottom 30px
+
+	&__link
+		display block
+		color inherit
+		text-decoration none
+
+	&__image
+		text-align center
+		img
+			display inline-block
+			vertical-align top
+			respimg()
+
+	&__w
+		padding-top 30px
+		padding-right 30px
+		padding-bottom 30px
+		padding-left 30px
+	&__title
+		margin-bottom 5px
+		font-size 18px
+		font-family $mB
+		color #00c6d7
+
+	&__text
+		margin-bottom 20px
+		font-size 18px
+
+	&__button
+		color #000
+		cursor pointer

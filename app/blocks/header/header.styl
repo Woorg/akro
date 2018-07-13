@@ -13,30 +13,58 @@
 		content ''
 		min-height 168px
 		background-image linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%)
+	&_mod
+		background #000
+		min-height 486px
+		.header__top
+			border-bottom 1px solid #5A5A5A
+		.header__bottom
+			position relative
+			z-index 1
+			float right
+			display block
+			max-width 250px
+			text-align right
+		.header__phone
+			margin-top 50px
+			margin-bottom 20px
+			margin-right 0
+			display block
+		.nav__trigger-open
+			display none
+		.nav__trigger-close
+			display block
+		.nav__item
+			margin-bottom 20px
+			max-width 200px
 	&__in
 		position relative
 		z-index 1
 		@extends .in
 	&__top
 		padding-top 43px
-		padding-bottom 43px
+		padding-bottom 45px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
-	// &__logo
-	// 	max-width 356px
+		+r($tL)
+			border-bottom 1px solid #5A5A5A
+			// padding-left 24px
+			padding-left 33px
+			// padding-right 24px
+			padding-right 0
 	&__nav
 		max-width 598px
 	&__bottom
 		display flex
 		flex-flow row wrap
-		-webkit-justify-content flex-end
 		justify-content flex-end
 		align-items center
+		+r($tL)
+			display none
 	&__phone
 		margin-right 30px
-	// &__button
 
 .phone
 	font-family $mR
@@ -45,7 +73,7 @@
 	line-height 1
 	text-decoration none
 	&__icon
-		margin-right 6px
+		margin-right 10px
 		width 18px
 		height 18px
 		fill #fff

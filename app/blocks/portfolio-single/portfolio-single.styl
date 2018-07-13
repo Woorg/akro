@@ -1,0 +1,89 @@
+.portfolio-single
+	display block
+	background #000
+	color #fff
+	overflow hidden
+	&__top
+		position relative
+		padding-top 290px
+		height 768px
+		&:after
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			left 0
+			content ''
+			background rgba(0,0,0, .3)
+	&__in
+		position relative
+		@extends .in
+		z-index 1
+		height 100%
+	&__title
+		@extends .title
+		margin-bottom 20px
+		letter-spacing 4px
+	&__subtitle
+		font-size 20px
+
+	&__link
+		position absolute
+		bottom 30px
+		left 14
+		border-bottom 1px solid #00c6d7
+		margin-left 33px
+		display inline-block
+		vertical-align top
+		font-size 20px
+		color #fff
+		line-height 1
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			border-bottom 1px solid transparent
+			tr(all .3s ease)
+		&:after
+			position absolute
+			top 0
+			left -33px
+			content ''
+			width 19px
+			height 19px
+			background url('../images/general/anchor.svg') 0 0 / cover no-repeat
+
+	&__laptop
+		position absolute
+		right -98px
+		bottom -50px
+
+	&__body
+		padding-top 80px
+		padding-bottom 100px
+		background #000
+
+	&__title-h2
+		@extends .title
+		margin-bottom 46px
+		letter-spacing 4px
+
+	&__row
+		margin-bottom 70px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+	&__col
+		margin-right 30px
+		width 48.5%
+		&:last-child
+			margin-right 0
+
+	&__text
+		font-size 18px
+		line-height 1.6
+
+	&__browser
+		position relative
+	&__browser-page
+		margin-top -3px

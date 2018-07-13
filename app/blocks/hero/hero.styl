@@ -16,24 +16,32 @@
 	&__in
 		position relative
 		@extends .in
-		padding-top 208px
+		padding-top 308px
 		height 100%
-	// &__w
-	// 	position absolute
-	// 	top calc(50% + 33px)
-	// 	left 0
-	// 	max-width 780px
-	// 	transform translateY(-50%)
+		+r($tL)
+			padding-top 227px
+
 	&__title
 		@extends .title
 		margin-top 33px
-		margin-bottom 43px
+		margin-bottom 23px
+		letter-spacing 4px
+		+r($tL)
+			padding-left 33px
+			padding-right 33px
 		span
 			font-family $mB
 	&__text
 		margin-bottom 30px
 		max-width 556px
-	// &__button
+		+r($tL)
+			padding-left 33px
+			padding-right 33px
+			max-width 70%
+
+	&__button
+		+r($tL)
+			margin-left 33px
 
 section.hero
 	.hero__slider
@@ -46,15 +54,19 @@ section.hero
 		position absolute
 		@extends .in
 		z-index 1
-		top 200px
+		top 305px
 		// left 30px
 		left 50%
 		bottom auto
 		text-align left
 		transform translateX(-50%)
+		+r($tL)
+			top 225px
+			padding-left 57px
+			padding-right 57px
 		li
 			position relative
-			padding-right 16px
+			padding-right 12px
 			width auto
 			height auto
 			font-family $mB
@@ -62,9 +74,11 @@ section.hero
 			&:after
 				position relative
 				top 0
-				right -16px
+				right -12px
 				content '/'
-				color rgba(255, 255, 255, 0.7)
+				color rgba(255, 255, 255, 0.3)
+			&:first-child
+				margin-left 0
 			&:last-child
 				&:after
 					display none

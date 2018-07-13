@@ -10,13 +10,23 @@
 			margin-bottom 0
 	&__row_fe
 		justify-content flex-end
+		+r($tL)
+			justify-content space-between
 	&__col
 		margin-right 20px
 		width 40%
+		+r($tL)
+			margin-right 0
+			margin-bottom 20px
+			width 57.7%
 		&:last-child
 			margin-right 0
+			+r($tL)
+				margin-bottom 0
 	&__col_wide
-		width 57%
+		width 57.5%
+		+r($tL)
+			width 100%
 	&__field
 		margin-bottom 20px
 		&:last-child
@@ -42,12 +52,14 @@
 			color #888888
 	&__note
 		position relative
-		margin-right 50px
+		margin-right 60px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items flex-start
 		line-height 1
+		+r($tL)
+			margin-left 30px
 	&__note-text
 		font-size 16px
 

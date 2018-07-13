@@ -9,6 +9,12 @@ mixin header()
 					.logo__slogan Digital-агентство полного цикла
 
 				nav.header__nav.nav
+
+					label.nav__trigger(for="nav-trigger")
+						+icon('menu', true).nav__trigger-open
+						+icon('menu-close', true).nav__trigger-close
+					input#nav-trigger.nav__checkbox(type="checkbox")
+
 					ul.nav__list
 						li.nav__item
 							a.nav__link(href="#") агентство

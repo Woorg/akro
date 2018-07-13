@@ -1,0 +1,23 @@
+extends /blocks/layout-default/layout-portfolio-single
+
+include /blocks/header/header
+
+include /blocks/breadcrumbs/breadcrumbs
+
+include /blocks/portfolio-single/portfolio-single
+
+include /blocks/cta/cta
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Контраст плюс - Digital-агентство полного цикла';
+
+block content
+	+header()
+	+portfolio-single()(style="background: url('assets/images/content/portfolio-case-1.jpg');")
+	+cta()
+	+footer()
+
+

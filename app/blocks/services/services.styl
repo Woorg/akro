@@ -3,10 +3,15 @@
 	&__in
 		@extends .in
 		border-top 1px solid #aaaaaa
-		padding-top 100px
+		padding-top 82px
+		+r($tL)
+			border-top none
 	&__title
 		@extends .title
-		margin-bottom 63px
+		margin-bottom 43px
+		+r($tL)
+			padding-left 33px
+			padding-right 33px
 	&__list
 		display flex
 		flex-flow row wrap
@@ -30,6 +35,9 @@
 			.services__top
 				border-bottom 1px solid #fff
 				tr(all .3s ease)
+			.services__button
+				border 2px solid #fff
+				tr(all .3s ease)
 	&__top
 		position relative
 		border-bottom 1px solid #767171
@@ -47,15 +55,20 @@
 		padding-top 120px
 		font-size 36px
 		color #FFF
+		+r($tL)
+			font-size 24px
 	&__button
 		position absolute
-		border 1px solid #fff
+		// border 1px solid #fff
+		border 2px solid #00c6d7
 		padding-top 16px
 		padding-right 30px
 		padding-bottom 9px
 		padding-left 30px
 		right 30px
 		bottom 50px
+		+r($tL)
+			padding-top 14px
 
 	&__button-icon
 		width 14px

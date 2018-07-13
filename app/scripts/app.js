@@ -1,7 +1,8 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import slick from 'slick-carousel';
-// import 'masonry-layout';
+import masonry from 'masonry-layout/dist/masonry.pkgd.min.js';
+import imagesLoaded from 'imagesloaded/imagesloaded.pkgd.min.js';
 // import 'magnific-popup';
 // import mask from "jquery-mask-plugin";
 // import 'jquery-validation';
@@ -63,6 +64,70 @@ import slick from 'slick-carousel';
 
 			});
 		}
+
+		let gridContainer = $('.works__grid');
+
+		if (gridContainer.length) {
+
+			let msnry = gridContainer.masonry({
+				itemSelector: '.works__item',
+				columnWidth: '.works__sizer',
+				percentPosition: true,
+				// isFitWidth: true
+				// stamp: '.works__item-big',
+			});
+
+			imagesLoaded( gridContainer ).on( 'progress', function() {
+				// layout Masonry after each image loads
+				msnry.layout();
+			});
+
+		}
+
+		$(window).load(function () {
+
+			let articlesContainer = $('.articles');
+
+			if (articlesContainer.length) {
+
+				let msnryA = articlesContainer.masonry({
+					itemSelector: '.articles__article',
+					columnWidth: '.articles__sizer',
+					percentPosition: true,
+					gutter: 30
+					// isFitWidth: true
+				});
+
+
+				// imagesLoaded( articlesContainer ).on( 'load', function() {
+				// 	msnryA.layout();
+				// });
+
+			}
+
+
+		});
+
+
+		/*Menu*/
+
+		const $navTrigger = $('.nav__trigger');
+		const $header = $('.header');
+
+		$navTrigger.on('click', function () {
+			$header.toggleClass('header_mod');
+		});
+
+		$(window).on('resize', function () {
+			if ($(window).width() > 1024) {
+				$header.removeClass('header_mod');
+			}
+		});
+
+
+		/*Callback*/
+
+
 
 
 		// $('.popup-open').magnificPopup({
@@ -193,7 +258,7 @@ import slick from 'slick-carousel';
 		widgetStilization.prependTo(".widget_wrap");
 	}
 
-		// pageWidget(['index', 'blog', 'portfolio', 'contacts']);
+		pageWidget(['index', 'contacts', 'agency', 'services', 'portfolio', 'portfolio-single', 'blog', 'blog-single']);
 
 	});
 
